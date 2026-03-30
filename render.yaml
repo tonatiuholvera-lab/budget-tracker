@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: budget-tracker-backend
+    runtime: node
+    region: frankfurt  # Cambia a oregon si prefieres US West
+    plan: free
+    buildCommand: npm install
+    startCommand: node server/index.js
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: FIREBASE_DATABASE_URL
+        sync: false  # Se configura manualmente
+      - key: FIREBASE_SERVICE_ACCOUNT
+        sync: false  # Se configura manualmente
