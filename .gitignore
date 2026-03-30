@@ -28,3 +28,5 @@ yarn-error.log*
 *.swp
 *.swo
 *~
+firebase-service-account.json
+budget-tracker-familia-firebase-adminsdk-fbsvc-cec12a9bb1.json
